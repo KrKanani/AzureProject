@@ -42,7 +42,7 @@ public class DashboardTest {
 	@Test(priority = 2)
 	public void demoTableTest(){
 		boolean flag = false;
-		driver.findElement(By.id("demotable")).click();
+		driver.findElement(By.id("demotable-11")).click();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		flag = driver.findElement(By.id("empmanager")).isDisplayed();
 		Assert.assertTrue(flag, "DemoTable page is not displayed.");
