@@ -81,12 +81,15 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.20</version>
 				<configuration>
-					<systemPropertyVariables>
+					<!-- <systemPropertyVariables>
 						<browser>${chrome}</browser>
 						<env>${env}</env>
-					</systemPropertyVariables>
+					</systemPropertyVariables> -->
+					<forkCount>3</forkCount>
+					<reuseForks>true</reuseForks>
+					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
